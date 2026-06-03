@@ -215,7 +215,7 @@ export function DemoWorkSection() {
         <SectionHeading
           eyebrow="Demo work"
           title="See what clarity can look like."
-          subtitle="Examples of the insights Amara can deliver. From retention risk and inventory waste, to profitability and executive decision support — Amara provides clarity to businesses."
+          subtitle="Examples of the insights Amara can deliver. From retention risk and inventory waste, to profitability and executive decision support"
         />
       </Reveal>
 

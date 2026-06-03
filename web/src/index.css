@@ -587,3 +587,29 @@ body {
   color: color-mix(in srgb, var(--amara-espresso) 55%, white);
   border: 1px solid color-mix(in srgb, var(--amara-nude-stone) 35%, transparent);
 }
+
+.growth-spectrum-track {
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--amara-smoked-teal) 25%, transparent));
+}
+
+.growth-spectrum-fill {
+  opacity: 0.85;
+}
+
+@keyframes growth-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.65;
+  }
+}
+
+.growth-spectrum-pulse {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: growth-pulse 3.5s ease-in-out infinite;
+}

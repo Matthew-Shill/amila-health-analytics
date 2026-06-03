@@ -80,7 +80,9 @@ export function Hero() {
             <span className="keyword-emphasis">Operational</span> clarity
           </span>
           <span className="hidden h-1 w-1 rounded-full bg-nude-stone sm:block" />
-          <span>Strategic insights</span>
+          <span>
+            <span className="keyword-emphasis">Strategic</span> insights
+          </span>
         </div>
       </div>
     </section>

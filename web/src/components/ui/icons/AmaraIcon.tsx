@@ -82,36 +82,36 @@ const ICONS: Record<AmaraIconName, ReactNode> = {
   ),
   "profit-blind-spot": (
     <>
-      <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2" />
-      <circle cx="12" cy="12" r="4" />
-      <path d="M9.5 9.5c.8-1 2.2-1 3 0" />
-      <path d="M10 14c.8.8 2.2.8 3 0" />
+      <path d="M2 2l20 20" />
+      <path d="M12 8.5c3.5 0 6.5 3.5 6.5 3.5" />
+      <path d="M12 15.5c-3.5 0-6.5-3.5-6.5-3.5" />
+      <circle cx="12" cy="12" r="2.5" />
     </>
   ),
   "retention-gap": (
     <>
-      <path d="M16 19v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-      <circle cx="10" cy="8" r="3" />
-      <path d="M18 12v6" />
-      <path d="M15 15h6" />
+      <circle cx="9" cy="9" r="2.5" />
+      <path d="M4 19v-1.5a5 5 0 0 1 5-5" />
+      <path d="M16 12h5" />
+      <path d="M19 10l2 2-2 2" />
     </>
   ),
   "inventory-waste": (
     <>
-      <path d="M4 8h16l-1.2 10H5.2L4 8Z" />
-      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-      <path d="M8 14h8" />
-      <path d="M12 11v6" />
-      <path d="M10 13l4 4M14 13l-4 4" />
+      <path d="M4 7h16" />
+      <path d="M7 7l1 12h8l1-12" />
+      <path d="M9 7V5h6v2" />
+      <path d="M10 11v5" />
+      <path d="M14 11v5" />
     </>
   ),
   "manual-reporting": (
     <>
-      <path d="M7 4h7l3 3v13H7V4Z" />
-      <path d="M14 4v4h4" />
-      <path d="M9 12h6M9 16h4" />
-      <circle cx="18" cy="6" r="3.5" />
-      <path d="M18 4.5v3M16.8 6h2.4" />
+      <rect x="6" y="4" width="12" height="16" rx="1.5" />
+      <path d="M9 2h6v3H9V2Z" />
+      <path d="M9 10h6" />
+      <path d="M9 14h4" />
+      <path d="M9 18h6" />
     </>
   ),
   "business-performance": (
@@ -123,10 +123,9 @@ const ICONS: Record<AmaraIconName, ReactNode> = {
   ),
   "profit-leakage": (
     <>
-      <path d="M12 3v14" />
-      <path d="M8.5 7.5 12 3l3.5 4.5" />
-      <path d="M7 19c1.2-2.5 3.4-4 5-4s3.8 1.5 5 4" />
-      <path d="M9.5 14.5c.6.8 1.5 1.2 2.5 1.2s1.9-.4 2.5-1.2" />
+      <path d="M8 4h8l-4 7-4-7Z" />
+      <path d="M12 11v5" />
+      <circle cx="12" cy="18.5" r="1.25" fill="currentColor" stroke="none" />
     </>
   ),
   "inventory-tracking": (
@@ -145,10 +144,11 @@ const ICONS: Record<AmaraIconName, ReactNode> = {
   ),
   "provider-performance": (
     <>
-      <path d="M12 3v3" />
-      <path d="M8.5 6h7" />
-      <circle cx="12" cy="13" r="5" />
-      <path d="M10 13h4M12 11v4" />
+      <circle cx="8" cy="8" r="2.5" />
+      <path d="M4 19v-2a4 4 0 0 1 4-4" />
+      <path d="M14 19V11" />
+      <path d="M17 19V14" />
+      <path d="M20 19V16" />
     </>
   ),
   "ai-recommendations": (
@@ -204,8 +204,12 @@ const ICONS: Record<AmaraIconName, ReactNode> = {
   ),
   "operational-clarity": (
     <>
-      <circle cx="12" cy="12" r="3" />
-      <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" />
+      <path d="M4 6h16" />
+      <path d="M4 12h16" />
+      <path d="M4 18h16" />
+      <circle cx="8" cy="6" r="2" fill="currentColor" stroke="none" />
+      <circle cx="16" cy="12" r="2" fill="currentColor" stroke="none" />
+      <circle cx="10" cy="18" r="2" fill="currentColor" stroke="none" />
     </>
   ),
   "growth-insights": (
@@ -274,9 +278,8 @@ const ICONS: Record<AmaraIconName, ReactNode> = {
   ),
   "strategic-recommendations": (
     <>
-      <path d="M4 18 12 6l8 12H4Z" />
-      <path d="M12 10v4" />
-      <circle cx="12" cy="15.5" r="0.75" fill="currentColor" stroke="none" />
+      <path d="M5 20V4" />
+      <path d="M5 4h9l-3 4 3 4H5" />
     </>
   ),
   optimization: (
@@ -348,46 +351,49 @@ const ICONS: Record<AmaraIconName, ReactNode> = {
   ),
   "role-access": (
     <>
-      <circle cx="9" cy="8" r="3" />
-      <path d="M4 19v-1.5a4 4 0 0 1 4-4h2" />
-      <path d="M16 11v6M13 14h6" />
-      <circle cx="17" cy="8" r="2.5" />
+      <circle cx="9" cy="8" r="2.5" />
+      <path d="M4 19v-1.5a4 4 0 0 1 4-4" />
+      <rect x="15" y="11" width="5" height="4" rx="0.5" />
+      <path d="M16.5 11V9.5a1 1 0 0 1 2 0V11" />
     </>
   ),
   "file-confidential": (
     <>
       <path d="M7 4h7l3 3v13H7V4Z" />
       <path d="M14 4v4h4" />
-      <path d="M9 13h6M9 17h4" />
-      <circle cx="12" cy="10" r="1" fill="currentColor" stroke="none" />
+      <rect x="10" y="12" width="4" height="3" rx="0.5" />
+      <path d="M11 12v-1a1 1 0 0 1 2 0v1" />
     </>
   ),
   "cloud-secure": (
     <>
       <path d="M7 18h10a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.6 1.8A3.5 3.5 0 0 0 7 18Z" />
-      <path d="M12 12v4M10.5 14h3" />
+      <rect x="10" y="12" width="4" height="3.5" rx="0.5" />
+      <path d="M11 12V10.5a1 1 0 0 1 2 0V12" />
     </>
   ),
   "audit-trail": (
     <>
-      <path d="M8 6h8M8 10h8M8 14h5" />
       <rect x="4" y="4" width="16" height="16" rx="2" />
-      <path d="M16 14l2 2 4-4" />
+      <path d="M8 9h7" />
+      <path d="M8 13h5" />
+      <path d="M15 15l1.5 1.5L19 13" />
     </>
   ),
   "healthcare-data": (
     <>
-      <path d="M4 19V5" />
-      <path d="M4 19h16" />
-      <path d="M8 15l3-4 3 2 4-6" />
-      <path d="M12 3v4M10 5h4" />
+      <path d="M4 12h3" />
+      <path d="M7 12l2-4 2 8 2-6 2 2h3" />
     </>
   ),
   "hospital-workflow": (
     <>
-      <path d="M10 5h4v3h3v11H7V8h3V5Z" />
-      <path d="M10 12h4M10 16h4" />
-      <path d="M12 3v2" />
+      <path d="M6 20V8h12v12" />
+      <path d="M6 12h12" />
+      <path d="M12 8V4" />
+      <path d="M10 6h4" />
+      <path d="M11 15h2" />
+      <path d="M12 14v2" />
     </>
   ),
   "graduation-cap": (
@@ -439,21 +445,6 @@ export const SERVICE_ICON_NAMES: AmaraIconName[] = [
   "ai-insights",
 ];
 
-export const AI_CARD_ICONS: AmaraIconName[] = [
-  "executive-summary",
-  "ask-data",
-  "forecasting",
-  "opportunity-detection",
-];
-
-export const PROCESS_ICONS: AmaraIconName[] = [
-  "discovery",
-  "assessment",
-  "insights-buildout",
-  "strategic-recommendations",
-  "optimization",
-];
-
 export const WHO_WE_HELP_ICONS: Record<string, AmaraIconName> = {
   "Aesthetic Clinics": "aesthetic-clinic",
   "Med Spas": "med-spa",
@@ -462,4 +453,40 @@ export const WHO_WE_HELP_ICONS: Record<string, AmaraIconName> = {
   "Therapy Practices": "therapy-practice",
   "Health Startups": "health-startup",
   "Multi-Provider Organizations": "multi-provider",
+  "Dental Practices": "private-practice",
+  "Dermatology & Skin Care Practices": "aesthetic-clinic",
+  "Chiropractic & Physical Therapy": "therapy-practice",
+  "Mental Health & Behavioral Health": "therapy-practice",
+  "Functional & Integrative Medicine": "wellness-clinic",
+  "Fitness, Recovery & Performance Studios": "wellness-clinic",
+  "Home Health & In-Home Care": "healthcare-data",
+  "Urgent Care & Walk-In Clinics": "hospital-workflow",
+  "Hospitals & Health Systems": "hospital-workflow",
+  "Physician Groups & MSOs": "multi-provider",
+  "Franchise & Multi-Brand Operators": "multi-provider",
+  "Corporate Wellness & Employer Health": "business-insights",
+  "Telehealth & Virtual Care Providers": "healthcare-data",
+  "Senior Living & Long-Term Care": "private-practice",
+  "Occupational & Employer Health Services": "hospital-workflow",
+  "Plastic & Reconstructive Surgery Centers": "aesthetic-clinic",
+  "OB/GYN & Women's Health Practices": "wellness-clinic",
+  "Pediatric & Family Medicine Practices": "private-practice",
+  "Ophthalmology & Vision Care": "private-practice",
+  "Orthopedic & Sports Medicine Clinics": "therapy-practice",
+  "Addiction Treatment & Recovery Programs": "wellness-clinic",
+  "Hospice & Palliative Care Organizations": "wellness-clinic",
+  "Medical Laboratories & Diagnostic Imaging": "healthcare-data",
+  "Fertility & Reproductive Health Clinics": "wellness-clinic",
+  "Weight Loss & Metabolic Health Programs": "wellness-clinic",
+  "Sleep Medicine Centers": "hospital-workflow",
+  "Pharmacy & Specialty Dispensing": "inventory-tracking",
+  "Health Tech & Digital Health Companies": "health-startup",
+};
+
+export const WHO_WE_SERVE_SIZE_ICONS: Record<string, AmaraIconName> = {
+  "Sole Practitioners & Solo Operators": "private-practice",
+  "Small Teams & Boutique Practices": "wellness-clinic",
+  "Growth-Stage Startups": "health-startup",
+  "Multi-Location & Regional Groups": "multi-provider",
+  "Enterprise & Major Corporations": "hospital-workflow",
 };

@@ -15,10 +15,9 @@ export const LOGO = {
 export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
   { label: "Demo Work", href: "/#demo-work" },
-  { label: "Who We Help", href: "/#who-we-help" },
-  { label: "Process", href: "/#process" },
+  { label: "Who We Help", href: "/who-we-help" },
   { label: "About", href: "/about" },
-  { label: "Privacy", href: "/#privacy-security" },
+  { label: "Privacy", href: "/privacy-security" },
 ] as const;
 
 export const ORGANIZATION_TYPES = [

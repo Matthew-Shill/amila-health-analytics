@@ -11,7 +11,6 @@ import {
   NADINE_TRAINING_NOTE,
   PRIVACY_SECURITY_CARDS,
   TRAINING_BADGES,
-  TRAINING_BADGE_DISCLAIMER,
 } from "@/lib/trust-content";
 import { AmaraIcon } from "@/components/ui/icons/AmaraIcon";
 
@@ -217,9 +216,6 @@ export function PrivacySecurityPage() {
               </Reveal>
             ))}
           </div>
-          <p className="mt-6 text-xs leading-relaxed text-[color-mix(in_srgb,var(--amara-espresso)_52%,white)]">
-            {TRAINING_BADGE_DISCLAIMER}
-          </p>
         </SectionBackdrop>
 
         <ComplianceRoadmapSection />

@@ -120,8 +120,5 @@ export const DASHBOARD_TRUST_FEATURES = [
 export const FOOTER_TRUST_TEXT =
   "Amara Health Analytics is committed to privacy-conscious healthcare analytics, secure data workflows, and HIPAA-aligned practices for organizations handling protected health information.";
 
-export const TRAINING_BADGE_DISCLAIMER =
-  "Training badges reflect professional healthcare experience and privacy/security training history. They are not government-issued HIPAA certifications.";
-
 export const NADINE_TRAINING_NOTE =
   "Nadine has completed healthcare privacy, HIPAA awareness, privacy/security, and business associate training through her healthcare work experience.";

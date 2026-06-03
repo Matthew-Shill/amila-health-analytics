@@ -5,7 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { BrandMark } from "@/components/ui/BrandMark";
 
 const footerLinks = [
-  ...NAV_LINKS.filter((l) => ["Services", "Demo Work", "About", "Privacy"].includes(l.label)),
+  ...NAV_LINKS.filter((l) =>
+    ["Services", "Demo Work", "Who We Help", "About", "Privacy"].includes(l.label),
+  ),
 ];
 
 export function Footer() {

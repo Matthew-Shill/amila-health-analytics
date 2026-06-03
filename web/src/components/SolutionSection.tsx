@@ -45,26 +45,7 @@ export function SolutionSection() {
                     />
                   </span>
                   <span className="pt-1 text-sm font-medium leading-relaxed text-espresso sm:text-base">
-                    {point.includes("AI-assisted") ? (
-                      <>
-                        Surface{" "}
-                        <span className="keyword-emphasis">AI-assisted</span> recommendations
-                      </>
-                    ) : point.includes("profit") ? (
-                      <>
-                        Identify <span className="keyword-emphasis">profit</span> leakage
-                      </>
-                    ) : point.includes("retention") ? (
-                      <>
-                        Improve patient <span className="keyword-emphasis">retention</span>
-                      </>
-                    ) : point.includes("inventory") ? (
-                      <>
-                        Track <span className="keyword-emphasis">inventory</span> by real usage
-                      </>
-                    ) : (
-                      point
-                    )}
+                    {point}
                   </span>
                 </li>
               ))}
