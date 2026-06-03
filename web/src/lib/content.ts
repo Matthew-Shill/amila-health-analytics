@@ -86,6 +86,10 @@ export const SERVICES = [
 export const DEMOS = [
   {
     id: "retention",
+    navLabel: "Retention",
+    dashboardTitle: "Patient Retention & Churn Risk",
+    insight:
+      "24 high-LTV patients show declining visit frequency — prioritize re-engagement this week.",
     title: "Which patients are at risk of not returning?",
     problemSolved:
       "Clinics often cannot identify churn risk until revenue is already lost.",
@@ -104,6 +108,10 @@ export const DEMOS = [
   },
   {
     id: "profitability",
+    navLabel: "Profitability",
+    dashboardTitle: "Service Profitability",
+    insight:
+      "Injectables lead margin at 62% — laser revenue is strong but margin lags after consumables.",
     title: "Which services are actually most profitable?",
     problemSolved:
       "Revenue alone does not reveal margin, product cost, provider cost, or true profitability.",
@@ -122,6 +130,10 @@ export const DEMOS = [
   },
   {
     id: "inventory",
+    navLabel: "Inventory",
+    dashboardTitle: "Unit-Level Inventory Clarity",
+    insight:
+      "180-unit variance on Botox — investigate drawer usage and treatment documentation gaps.",
     title: "Where is product inventory being wasted?",
     problemSolved:
       "Many systems track inventory by vial, syringe, or package, while clinics use products by units, doses, or sessions.",
@@ -141,6 +153,10 @@ export const DEMOS = [
   },
   {
     id: "provider-value",
+    navLabel: "Provider Value",
+    dashboardTitle: "Provider Performance & Loyalty",
+    insight:
+      "Dr. A leads rebooking at 78% with $2.4k average patient value — model scheduling around top performers.",
     title: "Which providers drive the strongest long-term value?",
     problemSolved:
       "Provider production does not always reveal retention, lifetime value, or patient loyalty.",
@@ -159,6 +175,10 @@ export const DEMOS = [
   },
   {
     id: "marketing",
+    navLabel: "Marketing ROI",
+    dashboardTitle: "Channel Attribution & ROI",
+    insight:
+      "Referral patients deliver 6.1× ROI — shift test budget from paid social toward referral incentives.",
     title: "Which marketing channels create profitable patients?",
     problemSolved:
       "Marketing spend may be tracked, but attribution and patient quality are often unclear.",
@@ -177,6 +197,10 @@ export const DEMOS = [
   },
   {
     id: "executive",
+    navLabel: "Executive",
+    dashboardTitle: "Monthly Executive Summary",
+    insight:
+      "Revenue up 14.8% QoQ — address inventory variance and at-risk retention cohort in Q2 priorities.",
     title: "Executive Monthly Insight Summary",
     problemSolved:
       "Owners need one trusted view of performance, risks, opportunities, and recommended next steps.",

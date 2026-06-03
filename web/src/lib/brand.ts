@@ -31,3 +31,30 @@ export const ORGANIZATION_TYPES = [
   "Multi-Provider Organization",
   "Other",
 ] as const;
+
+export const EMPLOYEE_COUNT_RANGES = [
+  "1–5",
+  "6–10",
+  "11–25",
+  "26–50",
+  "51–100",
+  "100+",
+] as const;
+
+export const CLIENTELE_SIZE_RANGES = [
+  "Under 100 active clients",
+  "100–250",
+  "250–500",
+  "500–1,000",
+  "1,000+",
+  "Not sure",
+] as const;
+
+export const ANALYTICS_TOOLS = [
+  "No — we don't use a BI/analytics tool yet",
+  "Tableau",
+  "Power BI",
+  "Looker / Looker Studio",
+  "Excel or Google Sheets only",
+  "Other",
+] as const;

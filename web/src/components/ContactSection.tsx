@@ -1,5 +1,10 @@
 import { useState, type FormEvent } from "react";
-import { ORGANIZATION_TYPES } from "@/lib/brand";
+import {
+  ANALYTICS_TOOLS,
+  CLIENTELE_SIZE_RANGES,
+  EMPLOYEE_COUNT_RANGES,
+  ORGANIZATION_TYPES,
+} from "@/lib/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
@@ -10,6 +15,11 @@ export interface ContactFormPayload {
   organization: string;
   website: string;
   organizationType: string;
+  bookingPlatform: string;
+  retailPlatform: string;
+  employeeCount: string;
+  averageClienteleSize: string;
+  analyticsTool: string;
   needs: string;
   message: string;
 }
@@ -20,6 +30,11 @@ const initial: ContactFormPayload = {
   organization: "",
   website: "",
   organizationType: "",
+  bookingPlatform: "",
+  retailPlatform: "",
+  employeeCount: "",
+  averageClienteleSize: "",
+  analyticsTool: "",
   needs: "",
   message: "",
 };
@@ -72,7 +87,15 @@ export function ContactSection() {
   const field = (
     key: keyof ContactFormPayload,
     label: string,
-    opts?: { type?: string; as?: "textarea" | "select"; required?: boolean },
+    opts?: {
+      type?: string;
+      as?: "textarea" | "select";
+      required?: boolean;
+      placeholder?: string;
+      hint?: string;
+      selectPlaceholder?: string;
+      selectOptions?: readonly string[];
+    },
   ) => {
     const id = `contact-${key}`;
     const common =
@@ -80,6 +103,9 @@ export function ContactSection() {
     const border = errors[key]
       ? "border-red-400/80"
       : "border-[color-mix(in_srgb,var(--amara-nude-stone)_50%,transparent)]";
+    const selectOptions =
+      opts?.selectOptions ??
+      (key === "organizationType" ? ORGANIZATION_TYPES : []);
 
     return (
       <div>
@@ -92,6 +118,11 @@ export function ContactSection() {
             </span>
           )}
         </label>
+        {opts?.hint && (
+          <p className="mt-1 text-xs text-[color-mix(in_srgb,var(--amara-espresso)_65%,white)]">
+            {opts.hint}
+          </p>
+        )}
         {opts?.as === "textarea" ? (
           <textarea
             id={id}
@@ -99,6 +130,7 @@ export function ContactSection() {
             rows={4}
             className={`${common} ${border} resize-y`}
             value={form[key]}
+            placeholder={opts?.placeholder}
             onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
             aria-invalid={!!errors[key]}
             aria-describedby={errors[key] ? `${id}-error` : undefined}
@@ -112,8 +144,10 @@ export function ContactSection() {
             onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
             aria-invalid={!!errors[key]}
           >
-            <option value="">Select organization type</option>
-            {ORGANIZATION_TYPES.map((t) => (
+            <option value="">
+              {opts?.selectPlaceholder ?? "Select an option"}
+            </option>
+            {selectOptions.map((t) => (
               <option key={t} value={t}>
                 {t}
               </option>
@@ -126,6 +160,7 @@ export function ContactSection() {
             type={opts?.type ?? "text"}
             className={`${common} ${border}`}
             value={form[key]}
+            placeholder={opts?.placeholder}
             onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
             aria-invalid={!!errors[key]}
           />
@@ -175,7 +210,47 @@ export function ContactSection() {
               {field("email", "Email", { type: "email" })}
               {field("organization", "Organization")}
               {field("website", "Website", { required: false })}
-              <div className="sm:col-span-2">{field("organizationType", "Organization Type", { as: "select" })}</div>
+              <div className="sm:col-span-2">
+                {field("organizationType", "Organization Type", {
+                  as: "select",
+                  selectPlaceholder: "Select organization type",
+                })}
+              </div>
+              {field("bookingPlatform", "What booking platform do you use?", {
+                required: false,
+                placeholder: "e.g. Jane App, Mindbody, Acuity, Boulevard",
+              })}
+              {field("retailPlatform", "Retail or e-commerce platform", {
+                required: false,
+                placeholder: "e.g. Shopify, Square, WooCommerce — or None",
+                hint: "Online store or point-of-sale tools you use for products and retail.",
+              })}
+              {field("employeeCount", "How many employees are in your practice?", {
+                as: "select",
+                required: false,
+                selectPlaceholder: "Select a range",
+                selectOptions: EMPLOYEE_COUNT_RANGES,
+              })}
+              {field("averageClienteleSize", "Average active clientele size", {
+                as: "select",
+                required: false,
+                selectPlaceholder: "Select a range",
+                selectOptions: CLIENTELE_SIZE_RANGES,
+                hint: "Approximate number of active clients or patients you serve.",
+              })}
+              <div className="sm:col-span-2">
+                {field(
+                  "analyticsTool",
+                  "Do you already use a data analytics or BI tool?",
+                  {
+                    as: "select",
+                    required: false,
+                    selectPlaceholder: "Select one",
+                    selectOptions: ANALYTICS_TOOLS,
+                    hint: "e.g. Tableau, Power BI, Looker, or spreadsheet-only reporting.",
+                  },
+                )}
+              </div>
               <div className="sm:col-span-2">
                 {field("needs", "What do you need help with?")}
               </div>
