@@ -1,0 +1,24 @@
+/**
+ * Amara Health Analytics — design tokens
+ * Import in web projects: @import './tokens.css';
+ */
+
+:root {
+  /* Colors */
+  --amara-pearl: #f5f1eb;
+  --amara-nude-stone: #d8c0a8;
+  --amara-smoked-teal: #43696a;
+  --amara-espresso: #4b342b;
+
+  /* Semantic */
+  --amara-bg: var(--amara-pearl);
+  --amara-brand: var(--amara-nude-stone);
+  --amara-accent: var(--amara-smoked-teal);
+  --amara-text: var(--amara-espresso);
+
+  /* Typography */
+  --amara-font-headline: "Playfair Display", Georgia, serif;
+  --amara-font-body: "Montserrat", system-ui, sans-serif;
+  --amara-font-slogan: "Allura", "Segoe Script", cursive;
+  --amara-tracking-wide: 0.18em;
+}

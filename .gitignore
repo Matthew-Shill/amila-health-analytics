@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.tmp
+~$*
+
+# Dependencies & build output
+web/node_modules/
+web/dist/
+
+# Synced from assets/ — run `npm run sync-assets` in web/ after clone
+web/public/logos/
+web/public/fonts/
+
+# Optional large originals
+assets/photos/**/originals/

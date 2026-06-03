@@ -1,0 +1,14 @@
+Amara Health Analytics — font licenses
+
+The following typefaces in this directory are used under the
+SIL Open Font License, Version 1.1 (OFL-1.1):
+
+  - Playfair Display (Copyright The Playfair Display Project Authors)
+  - Montserrat (Copyright The Montserrat Project Authors)
+  - Allura (Copyright TypeSETit, LLC)
+
+Full license text: https://openfontlicense.org/open-font-license-official-text/
+
+These fonts were sourced from Google Fonts and self-hosted for
+offline and production use. Original files are retained with
+versioned filenames.
