@@ -511,35 +511,29 @@ export type TeamMember = {
     leftPercent: number;
     topPercent: number;
   };
+  aboutHighlights?: readonly string[];
 };
 
 export const TEAM_MEMBERS = [
   {
     id: "nadine",
     name: "Nadine",
-    lastName: "",
-    title: "Co-Founder & Lead Analytics Consultant",
+    lastName: "Shill",
+    title: "CEO & Founder",
     credential:
       "Johns Hopkins-trained Applied & Computational Mathematics professional with experience in AI, machine learning, data analytics, and healthcare-focused systems.",
     support:
       "Nadine helps transform complex operational and client data into clear reporting, practical recommendations, and smarter growth decisions.",
-    bio: "Nadine brings a strong quantitative and technical foundation to Amara Health Analytics, with graduate training in Applied & Computational Mathematics from Johns Hopkins University and experience across AI, machine learning, data analytics, and modern digital systems. Her work focuses on turning complex information into clear, useful insight for healthcare, wellness, and aesthetic businesses.",
+    bio: "Nadine brings a strong quantitative and technical foundation to Amara Health Analytics, with graduate training in Applied & Computational Mathematics from Johns Hopkins University and ongoing work in genomic data analysis at the University of Connecticut. Her background spans AI, machine learning, statistical modeling, and production data systems—experience she applies to help healthcare, wellness, and aesthetic businesses turn scattered operational data into clear reporting, practical recommendations, and smarter growth decisions.",
+    aboutHighlights: [
+      "M.S. Applied & Computational Mathematics, Johns Hopkins University",
+      "Genomic Data Analysis Graduate Certificate, University of Connecticut",
+      "Data Science Team Lead, Mercor",
+      "Deep Learning & Machine Learning Specializations, deeplearning.ai",
+      "Production ML workflows with Python, TensorFlow, PyTorch, and Streamlit",
+    ],
     image: "/images/Nadine Headshot.jpg",
-    initials: "N",
-  },
-  {
-    id: "matt",
-    name: "Matt Shill",
-    aboutName: "Matthew",
-    lastName: "",
-    title: "Co-Founder & Systems / Digital Strategy",
-    credential:
-      "Technology, web systems, automation, branding, and client experience strategy.",
-    support:
-      "Matthew supports the systems, digital experience, and implementation side of Amara's work, helping turn insights into usable workflows and client-facing improvements.",
-    bio: "Matt supports Amara's digital systems, implementation strategy, website experience, automation planning, and client-facing workflows. His background in technology, branding, and business systems helps Amara connect analytics with practical tools that improve how teams operate and communicate.",
-    image: "/images/40170020.JPG",
-    initials: "MS",
+    initials: "NS",
   },
 ] as const satisfies readonly TeamMember[];
 

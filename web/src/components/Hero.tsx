@@ -41,10 +41,9 @@ export function Hero() {
             </p>
 
             <p className="mt-5 text-base leading-relaxed text-[color-mix(in_srgb,var(--amara-espresso)_78%,white)] sm:text-lg">
-              Amara Health Analytics helps healthcare, wellness, and aesthetic businesses uncover
-              opportunities lost in the reporting and booking platforms they use. We curate cohesive
-              reports that improve operations and growth, fostering better experiences for providers
-              and clients backed by data.
+              Amara Health Analytics helps businesses uncover opportunities lost in the platforms
+              they use. We curate cohesive reports that improve operations. Fostering better
+              experiences for providers and clients backed by data.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">

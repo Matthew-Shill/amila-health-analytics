@@ -120,21 +120,21 @@ export function AboutPage() {
           </div>
         </SectionBackdropWide>
 
-        <SectionBackdrop tone="teal">
+        <SectionBackdropWide tone="teal">
           <Reveal>
             <SectionHeading
               eyebrow="The team"
               title="Led by Data, Systems, and Care Experience"
             />
           </Reveal>
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-8">
             {TEAM_MEMBERS.map((member, i) => (
               <Reveal key={member.id} delay={(i % 4) as 0 | 1 | 2 | 3}>
-                <TeamProfileCard member={member} variant="full" />
+                <TeamProfileCard member={member} variant="full" wide />
               </Reveal>
             ))}
           </div>
-        </SectionBackdrop>
+        </SectionBackdropWide>
 
         <SectionBackdropWide tone="warm">
           <Reveal>
