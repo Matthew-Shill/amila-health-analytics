@@ -36,6 +36,21 @@ See [web/README.md](web/README.md) for more detail.
 
 After adding or updating logos, run `npm run sync-assets` from `web/`.
 
+## Deploy on Vercel
+
+The app is in **`web/`**, not the repo root. Either use the included root `vercel.json` (recommended), or in the Vercel project settings set:
+
+| Setting | Value |
+|---------|--------|
+| **Root Directory** | `web` |
+| **Build Command** | `npm run build` |
+| **Output Directory** | `dist` |
+| **Install Command** | `npm install` |
+
+`npm run build` runs `sync-assets` first (copies logos from `assets/` into `web/public/`).
+
+If you see **404 NOT_FOUND**, the deployment is usually pointing at the wrong folder or a failed build—check the Vercel build logs.
+
 ## Remote
 
 GitHub: https://github.com/Matthew-Shill/amara-health-analytics

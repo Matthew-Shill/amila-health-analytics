@@ -36,3 +36,7 @@ Logos are copied from `../assets/logos/` — do not recreate or modify logo file
 npm run build
 npm run preview
 ```
+
+## Vercel
+
+Prefer connecting the GitHub repo and using the **root** `vercel.json` in the repository (builds `web/` automatically). Alternatively set **Root Directory** to `web` in the Vercel dashboard.
