@@ -23,7 +23,7 @@ Open [http://localhost:5173](http://localhost:5173).
 
 Logos are copied from `../assets/logos/` — do not recreate or modify logo files.
 
-- Header / footer: `AHA Full Logo Stone.svg`
+- Header / footer: `Stone Full Logo Transparent.png` (Amila wordmark)
 - Favicon / motifs: `AHA Icon Stone.svg`
 
 ## Contact form integration

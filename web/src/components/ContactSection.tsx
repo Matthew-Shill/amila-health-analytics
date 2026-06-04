@@ -176,7 +176,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section-pad section-tone-teal-rich relative overflow-hidden">
+    <section id="contact" className="section-pad section-tone-teal relative overflow-hidden">
       <div className="ambient-mesh pointer-events-none absolute inset-0" aria-hidden />
       <div className="container-narrow relative z-10">
         <Reveal>

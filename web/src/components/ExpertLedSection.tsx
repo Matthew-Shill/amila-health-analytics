@@ -6,7 +6,7 @@ import { TeamProfileCard } from "@/components/TeamProfileCard";
 
 export function ExpertLedSection() {
   return (
-    <SectionBackdrop id="team" tone="teal">
+    <SectionBackdrop id="team" tone="warm">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <Reveal className="lg:pr-4">
           <p className="text-xs font-semibold uppercase tracking-[var(--amila-tracking-wide)] text-smoked-teal">

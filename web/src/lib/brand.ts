@@ -4,9 +4,15 @@ export const MISSION = "Don't be the business with wasted data.";
 
 /** Primary web paths — SVG for crisp scaling. PNG copies live alongside in assets/ for export/print. */
 export const LOGO = {
-  fullStone: "/logos/full/AHA Full Logo Stone.svg",
-  fullTeal: "/logos/full/AHA Full Logo Teal.svg",
-  fullEspresso: "/logos/full/AHA Full Logo Espresso.svg",
+  fullStone: "/logos/full/Stone Full Logo.svg",
+  fullStonePng: "/logos/full/Stone Full Logo.png",
+  fullStoneTransparent: "/logos/full/Stone Full Logo Transparent.png",
+  fullTeal: "/logos/full/Teal Full Logo.svg",
+  fullTealPng: "/logos/full/Teal Full Logo.png",
+  fullTealTransparent: "/logos/full/Teal Full Logo Transparent.png",
+  fullEspresso: "/logos/full/Espesso Full Logo.svg",
+  fullEspressoPng: "/logos/full/Espesso Full Logo.png",
+  fullEspressoTransparent: "/logos/full/Espesso Full Logo Transparent.png",
   iconStone: "/logos/icon/AHA Icon Stone.svg",
   iconTeal: "/logos/icon/AHA Icon Teal.svg",
   iconEspresso: "/logos/icon/AHA Icon Espresso.svg",

@@ -31,7 +31,7 @@ export function PrivacySecuritySection() {
     isMobile && visibleCount < PRIVACY_SECURITY_CARDS.length;
 
   return (
-    <SectionBackdropWide id="privacy-security" tone="warm">
+    <SectionBackdropWide id="privacy-security" tone="default">
       <Reveal>
         <SectionHeading
           eyebrow="Privacy & security"

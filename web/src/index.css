@@ -547,6 +547,45 @@ body {
   }
 }
 
+/* Full Amila wordmark — height-driven sizing keeps wide logos readable in header/footer */
+.brand-full-logo {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  height: var(--brand-full-logo-height);
+  width: auto;
+  max-width: min(100%, var(--brand-full-logo-max-width));
+}
+
+.brand-full-logo--compact {
+  --brand-full-logo-height: 2.35rem;
+  --brand-full-logo-max-width: 10.5rem;
+}
+
+.brand-full-logo--comfortable {
+  --brand-full-logo-height: 2.5rem;
+  --brand-full-logo-max-width: 12rem;
+}
+
+@media (min-width: 640px) {
+  .brand-full-logo--compact {
+    --brand-full-logo-height: 2.75rem;
+    --brand-full-logo-max-width: 12.5rem;
+  }
+
+  .brand-full-logo--comfortable {
+    --brand-full-logo-height: 3.25rem;
+    --brand-full-logo-max-width: 15rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .brand-full-logo--comfortable {
+    --brand-full-logo-height: 3.75rem;
+    --brand-full-logo-max-width: 17rem;
+  }
+}
+
 .verified-trust-badge {
   display: inline-flex;
   align-items: center;

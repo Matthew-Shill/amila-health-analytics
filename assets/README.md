@@ -25,11 +25,11 @@ Full **Amila Health Analytics** wordmark files.
 
 | File | Use |
 |------|-----|
-| `AHA Full Logo Stone.svg` | Header & footer on light backgrounds (primary on web) |
-| `AHA Full Logo Stone.png` | Same — raster fallback / non-SVG contexts |
-| `AHA Full Logo Teal.png` | Alternate on light backgrounds |
-| `AHA Full Logo Espresso.png` | Darker variant |
-| `AHA Full Logo Sage.png` | Alternate accent |
+| `Stone Full Logo.svg` | Header & footer on light backgrounds (primary on web) |
+| `Stone Full Logo.png` | Same — raster fallback / non-SVG contexts |
+| `Stone Full Logo Transparent.png` | Preferred for web header/footer (transparent background) |
+| `Teal Full Logo.svg` / `.png` | Alternate on light backgrounds |
+| `Espesso Full Logo.svg` / `.png` | Darker variant |
 
 Keep **both** SVG and PNG in these folders. The website uses **SVG** (sharp at any size). PNGs are for favicon fallbacks, social previews, email, and print.
 

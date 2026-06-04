@@ -58,7 +58,7 @@ export function WhoWeHelpSection() {
   const hasMore = visibleCount < WHO_WE_HELP.length;
 
   return (
-    <SectionBackdropWide tone="contrast">
+    <SectionBackdropWide tone="default">
       <Reveal>
         <SectionHeading
           eyebrow="Industries & specialties"

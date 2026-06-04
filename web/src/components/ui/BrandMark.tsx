@@ -1,10 +1,5 @@
 import { COMPANY_NAME } from "@/lib/brand";
-import {
-  BRAND_ICON_WEB,
-  BRAND_MARK_LAYOUT,
-  BRAND_WORDMARK,
-  type BrandMarkLayout,
-} from "@/lib/logo";
+import { BRAND_FULL_LOGO_WEB, BRAND_MARK_LAYOUT, type BrandMarkLayout } from "@/lib/logo";
 
 type BrandMarkProps = {
   /** `compact` for the fixed header; `comfortable` for footer and open layouts. */
@@ -17,22 +12,12 @@ export function BrandMark({ layout = "comfortable" }: BrandMarkProps) {
   return (
     <div className={config.containerClass}>
       <img
-        src={BRAND_ICON_WEB.teal}
-        alt=""
-        className={config.iconClass}
-        width={64}
-        height={64}
-        aria-hidden
+        src={BRAND_FULL_LOGO_WEB.stone}
+        alt={COMPANY_NAME}
+        className={config.logoClass}
+        width={240}
+        height={72}
       />
-      <div
-        className={`min-w-0 flex-col justify-center overflow-hidden leading-none ${config.wordmarkClass}`}
-      >
-        <span className={config.primaryClass}>{BRAND_WORDMARK.primary}</span>
-        <span className={config.secondaryClass}>{BRAND_WORDMARK.secondary}</span>
-      </div>
-      {config.iconOnlyAccessibleLabel ? (
-        <span className="sr-only min-[380px]:hidden sm:hidden">{COMPANY_NAME}</span>
-      ) : null}
     </div>
   );
 }

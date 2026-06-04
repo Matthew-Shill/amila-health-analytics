@@ -210,7 +210,7 @@ function DemoShowcase() {
 
 export function DemoWorkSection() {
   return (
-    <SectionBackdropWide id="demo-work" tone="teal-rich" motif>
+    <SectionBackdropWide id="demo-work" tone="warm" motif>
       <Reveal>
         <SectionHeading
           eyebrow="Demo work"

@@ -159,7 +159,7 @@ export function AboutPage() {
           </div>
         </SectionBackdropWide>
 
-        <section className="section-pad">
+        <section className="section-pad section-tone-default">
           <div className="container-narrow">
             <Reveal>
               <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-espresso via-[color-mix(in_srgb,var(--amila-espresso)_90%,var(--amila-smoked-teal))] to-smoked-teal px-8 py-16 text-center sm:px-14 lg:py-24">

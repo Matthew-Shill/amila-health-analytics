@@ -14,7 +14,7 @@ const SERVICE_ACCENTS = [
 
 export function ServicesSection() {
   return (
-    <SectionBackdropWide id="services" tone="warm">
+    <SectionBackdropWide id="services" tone="teal">
       <Reveal>
         <SectionHeading
           eyebrow="Capabilities"
