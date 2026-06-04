@@ -7,6 +7,7 @@ import {
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionBackdrop } from "@/components/ui/SectionBackdrop";
+import { CollapsibleOnMobile } from "@/components/ui/CollapsibleOnMobile";
 
 const workflow = [
   { label: "Collect", desc: "Unify data across systems" },
@@ -14,6 +15,50 @@ const workflow = [
   { label: "Report", desc: "Build executive-ready dashboards and insight summaries" },
   { label: "Act", desc: "Prioritize the decisions most likely to improve performance" },
 ];
+
+function WorkflowPanel() {
+  return (
+    <div className="glass-panel-strong relative overflow-hidden rounded-3xl p-7 lg:p-9">
+      <div
+        className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[color-mix(in_srgb,var(--amila-smoked-teal)_15%,transparent)] blur-2xl"
+        aria-hidden
+      />
+      <p className="text-xs font-semibold uppercase tracking-[var(--amila-tracking-wide)] text-smoked-teal">
+        Our approach
+      </p>
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+        {workflow.map((step, i) => (
+          <div
+            key={step.label}
+            className="group rounded-2xl border border-[color-mix(in_srgb,var(--amila-nude-stone)_30%,transparent)] bg-white/50 p-4 transition-all hover:border-smoked-teal/40 hover:shadow-lg"
+          >
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-pearl ring-2 ring-[color-mix(in_srgb,var(--amila-smoked-teal)_25%,transparent)]">
+                <AmilaIcon
+                  name={WORKFLOW_ICONS[i]}
+                  className="h-5 w-5 text-smoked-teal"
+                />
+              </span>
+              <div>
+                <p className="font-headline text-lg text-espresso">{step.label}</p>
+                <p className="text-xs text-[color-mix(in_srgb,var(--amila-espresso)_65%,white)]">
+                  Step {i + 1}
+                </p>
+              </div>
+            </div>
+            <p className="mt-2 pl-[52px] text-sm text-[color-mix(in_srgb,var(--amila-espresso)_72%,white)]">
+              {step.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-6 rounded-2xl border border-[color-mix(in_srgb,var(--amila-smoked-teal)_20%,transparent)] bg-gradient-to-r from-[color-mix(in_srgb,var(--amila-smoked-teal)_12%,white)] to-transparent px-5 py-4 text-sm leading-relaxed text-espresso">
+        Amila is not simply a dashboard company. We partner at the intersection of
+        analytics, operations, technology, and growth strategy.
+      </p>
+    </div>
+  );
+}
 
 export function SolutionSection() {
   return (
@@ -53,45 +98,14 @@ export function SolutionSection() {
           </Reveal>
 
           <Reveal delay={2}>
-            <div className="glass-panel-strong relative overflow-hidden rounded-3xl p-7 lg:p-9">
-              <div
-                className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[color-mix(in_srgb,var(--amila-smoked-teal)_15%,transparent)] blur-2xl"
-                aria-hidden
-              />
-              <p className="text-xs font-semibold uppercase tracking-[var(--amila-tracking-wide)] text-smoked-teal">
-                Our approach
-              </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                {workflow.map((step, i) => (
-                  <div
-                    key={step.label}
-                    className="group rounded-2xl border border-[color-mix(in_srgb,var(--amila-nude-stone)_30%,transparent)] bg-white/50 p-4 transition-all hover:border-smoked-teal/40 hover:shadow-lg"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-pearl ring-2 ring-[color-mix(in_srgb,var(--amila-smoked-teal)_25%,transparent)]">
-                        <AmilaIcon
-                          name={WORKFLOW_ICONS[i]}
-                          className="h-5 w-5 text-smoked-teal"
-                        />
-                      </span>
-                      <div>
-                        <p className="font-headline text-lg text-espresso">{step.label}</p>
-                        <p className="text-xs text-[color-mix(in_srgb,var(--amila-espresso)_65%,white)]">
-                          Step {i + 1}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="mt-2 pl-[52px] text-sm text-[color-mix(in_srgb,var(--amila-espresso)_72%,white)]">
-                      {step.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 rounded-2xl border border-[color-mix(in_srgb,var(--amila-smoked-teal)_20%,transparent)] bg-gradient-to-r from-[color-mix(in_srgb,var(--amila-smoked-teal)_12%,white)] to-transparent px-5 py-4 text-sm leading-relaxed text-espresso">
-                Amila is not simply a dashboard company. We partner at the intersection of
-                analytics, operations, technology, and growth strategy.
-              </p>
-            </div>
+            <CollapsibleOnMobile
+              label="Our 4-step approach"
+              className="lg:contents"
+              contentClassName="mt-4 lg:mt-0"
+              preserveDesktopLayout
+            >
+              <WorkflowPanel />
+            </CollapsibleOnMobile>
           </Reveal>
         </div>
       </div>

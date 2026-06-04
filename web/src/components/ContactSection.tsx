@@ -8,6 +8,7 @@ import {
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { CollapsibleOnMobile } from "@/components/ui/CollapsibleOnMobile";
 
 export interface ContactFormPayload {
   name: string;
@@ -209,54 +210,61 @@ export function ContactSection() {
               {field("name", "Name")}
               {field("email", "Email", { type: "email" })}
               {field("organization", "Organization")}
-              {field("website", "Website", { required: false })}
               <div className="sm:col-span-2">
                 {field("organizationType", "Organization Type", {
                   as: "select",
                   selectPlaceholder: "Select organization type",
                 })}
               </div>
-              {field("bookingPlatform", "What booking platform do you use?", {
-                required: false,
-                placeholder: "e.g. Jane App, Mindbody, Acuity, Boulevard",
-              })}
-              {field("retailPlatform", "Retail or e-commerce platform", {
-                required: false,
-                placeholder: "e.g. Shopify, Square, WooCommerce — or None",
-                hint: "Online store or point-of-sale tools you use for products and retail.",
-              })}
-              {field("employeeCount", "How many employees are in your practice?", {
-                as: "select",
-                required: false,
-                selectPlaceholder: "Select a range",
-                selectOptions: EMPLOYEE_COUNT_RANGES,
-              })}
-              {field("averageClienteleSize", "Average active clientele size", {
-                as: "select",
-                required: false,
-                selectPlaceholder: "Select a range",
-                selectOptions: CLIENTELE_SIZE_RANGES,
-                hint: "Approximate number of active clients or patients you serve.",
-              })}
-              <div className="sm:col-span-2">
-                {field(
-                  "analyticsTool",
-                  "Do you already use a data analytics or BI tool?",
-                  {
-                    as: "select",
-                    required: false,
-                    selectPlaceholder: "Select one",
-                    selectOptions: ANALYTICS_TOOLS,
-                    hint: "e.g. Tableau, Power BI, Looker, or spreadsheet-only reporting.",
-                  },
-                )}
-              </div>
               <div className="sm:col-span-2">
                 {field("needs", "What do you need help with?")}
               </div>
-              <div className="sm:col-span-2">
-                {field("message", "Message", { as: "textarea", required: false })}
-              </div>
+              <CollapsibleOnMobile
+                label="Additional details (optional)"
+                className="sm:col-span-2"
+                contentClassName="grid gap-6 sm:grid-cols-2"
+                preserveDesktopLayout
+              >
+                {field("website", "Website", { required: false })}
+                {field("bookingPlatform", "What booking platform do you use?", {
+                  required: false,
+                  placeholder: "e.g. Jane App, Mindbody, Acuity, Boulevard",
+                })}
+                {field("retailPlatform", "Retail or e-commerce platform", {
+                  required: false,
+                  placeholder: "e.g. Shopify, Square, WooCommerce — or None",
+                  hint: "Online store or point-of-sale tools you use for products and retail.",
+                })}
+                {field("employeeCount", "How many employees are in your practice?", {
+                  as: "select",
+                  required: false,
+                  selectPlaceholder: "Select a range",
+                  selectOptions: EMPLOYEE_COUNT_RANGES,
+                })}
+                {field("averageClienteleSize", "Average active clientele size", {
+                  as: "select",
+                  required: false,
+                  selectPlaceholder: "Select a range",
+                  selectOptions: CLIENTELE_SIZE_RANGES,
+                  hint: "Approximate number of active clients or patients you serve.",
+                })}
+                <div className="sm:col-span-2">
+                  {field(
+                    "analyticsTool",
+                    "Do you already use a data analytics or BI tool?",
+                    {
+                      as: "select",
+                      required: false,
+                      selectPlaceholder: "Select one",
+                      selectOptions: ANALYTICS_TOOLS,
+                      hint: "e.g. Tableau, Power BI, Looker, or spreadsheet-only reporting.",
+                    },
+                  )}
+                </div>
+                <div className="sm:col-span-2">
+                  {field("message", "Message", { as: "textarea", required: false })}
+                </div>
+              </CollapsibleOnMobile>
               {status === "error" && (
                 <p className="sm:col-span-2 text-sm text-red-700" role="alert">
                   Something went wrong. Please try again.

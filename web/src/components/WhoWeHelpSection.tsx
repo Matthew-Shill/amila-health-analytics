@@ -4,10 +4,12 @@ import { AmilaIcon, WHO_WE_HELP_ICONS } from "@/components/ui/icons/AmilaIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionBackdropWide } from "@/components/ui/SectionBackdrop";
-import { Button } from "@/components/ui/Button";
+import { SeeMoreButton } from "@/components/ui/SeeMoreButton";
 
-const INITIAL_ROWS = 2;
-const ROWS_PER_EXPAND = 2;
+const DESKTOP_INITIAL_ROWS = 2;
+const DESKTOP_ROWS_PER_EXPAND = 2;
+const MOBILE_INITIAL_COUNT = 3;
+const MOBILE_EXPAND_BY = 3;
 
 function useGridColumns() {
   const [columns, setColumns] = useState(3);
@@ -34,11 +36,24 @@ function useGridColumns() {
   return columns;
 }
 
+function getInitialVisibleCount(columns: number) {
+  if (columns === 1) return MOBILE_INITIAL_COUNT;
+  return DESKTOP_INITIAL_ROWS * columns;
+}
+
+function getExpandIncrement(columns: number) {
+  if (columns === 1) return MOBILE_EXPAND_BY;
+  return DESKTOP_ROWS_PER_EXPAND * columns;
+}
+
 export function WhoWeHelpSection() {
   const columns = useGridColumns();
-  const [visibleRows, setVisibleRows] = useState(INITIAL_ROWS);
+  const [visibleCount, setVisibleCount] = useState(() => getInitialVisibleCount(columns));
 
-  const visibleCount = Math.min(visibleRows * columns, WHO_WE_HELP.length);
+  useEffect(() => {
+    setVisibleCount(getInitialVisibleCount(columns));
+  }, [columns]);
+
   const visibleItems = WHO_WE_HELP.slice(0, visibleCount);
   const hasMore = visibleCount < WHO_WE_HELP.length;
 
@@ -90,18 +105,15 @@ export function WhoWeHelpSection() {
       </div>
 
       {hasMore && (
-        <Reveal>
-          <div className="relative z-10 mt-10 flex justify-center">
-            <Button
-              variant="secondary"
-              onClick={() => setVisibleRows((rows) => rows + ROWS_PER_EXPAND)}
-              aria-expanded={false}
-              aria-controls="who-we-help-grid"
-            >
-              See More
-            </Button>
-          </div>
-        </Reveal>
+        <SeeMoreButton
+          ariaControls="who-we-help-grid"
+          ariaExpanded={false}
+          onClick={() =>
+            setVisibleCount((count) =>
+              Math.min(count + getExpandIncrement(columns), WHO_WE_HELP.length),
+            )
+          }
+        />
       )}
     </SectionBackdropWide>
   );

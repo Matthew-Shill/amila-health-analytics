@@ -3,6 +3,7 @@ import { AmilaIcon, SERVICE_ICON_NAMES } from "@/components/ui/icons/AmilaIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionBackdropWide } from "@/components/ui/SectionBackdrop";
+import { CollapsibleOnMobile } from "@/components/ui/CollapsibleOnMobile";
 
 const SERVICE_ACCENTS = [
   "from-smoked-teal/20 to-nude-stone/30",
@@ -41,17 +42,23 @@ export function ServicesSection() {
                   {service.title}
                 </h3>
               </div>
-              <ul className="relative mt-6 grid gap-2.5 sm:grid-cols-2">
-                {service.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-center gap-2.5 rounded-lg bg-[color-mix(in_srgb,var(--amila-pearl)_80%,white)] px-3 py-2 text-sm text-[color-mix(in_srgb,var(--amila-espresso)_80%,white)]"
-                  >
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-smoked-teal" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <CollapsibleOnMobile
+                label="View capabilities"
+                className="relative mt-6"
+                contentClassName="mt-4"
+              >
+                <ul className="grid gap-2.5 sm:grid-cols-2">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2.5 rounded-lg bg-[color-mix(in_srgb,var(--amila-pearl)_80%,white)] px-3 py-2 text-sm text-[color-mix(in_srgb,var(--amila-espresso)_80%,white)]"
+                    >
+                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-smoked-teal" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CollapsibleOnMobile>
             </article>
           </Reveal>
         ))}
