@@ -40,16 +40,42 @@ const initial: ContactFormPayload = {
   message: "",
 };
 
-/**
- * Submit handler stub — wire to HubSpot, Formspree, Supabase, or API routes.
- * Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(payload) })
- */
+const CONTACT_RECIPIENT = "nadine@amilahealthanalytics.com";
+
 async function submitContactForm(
   payload: ContactFormPayload,
 ): Promise<{ ok: boolean }> {
-  void payload;
-  await new Promise((r) => setTimeout(r, 800));
-  return { ok: true };
+  const response = await fetch(
+    `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_RECIPIENT)}`,
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _subject: `New Amila inquiry from ${payload.name} (${payload.organization})`,
+        _template: "table",
+        name: payload.name,
+        email: payload.email,
+        organization: payload.organization,
+        website: payload.website || "—",
+        organizationType: payload.organizationType,
+        bookingPlatform: payload.bookingPlatform || "—",
+        retailPlatform: payload.retailPlatform || "—",
+        employeeCount: payload.employeeCount || "—",
+        averageClienteleSize: payload.averageClienteleSize || "—",
+        analyticsTool: payload.analyticsTool || "—",
+        needs: payload.needs,
+        message: payload.message || "—",
+      }),
+    },
+  );
+
+  if (!response.ok) return { ok: false };
+
+  const data = (await response.json()) as { success?: string | boolean };
+  return { ok: data.success === "true" || data.success === true };
 }
 
 export function ContactSection() {
@@ -205,7 +231,7 @@ export function ContactSection() {
               onSubmit={onSubmit}
               className="glass-panel-strong grid gap-6 rounded-3xl p-6 sm:grid-cols-2 sm:p-8 lg:gap-8 lg:p-10"
               noValidate
-              data-form-provider="stub"
+              data-form-provider="formsubmit"
             >
               {field("name", "Name")}
               {field("email", "Email", { type: "email" })}
