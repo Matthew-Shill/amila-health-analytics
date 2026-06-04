@@ -29,14 +29,14 @@ export function Header() {
               : "bg-[color-mix(in_srgb,var(--amila-pearl)_40%,transparent)] backdrop-blur-sm"
           }`}
         >
-          <div className="container-wide flex items-center justify-between gap-4 px-5 py-3.5 sm:px-8 sm:py-4 lg:px-12">
+          <div className="container-wide grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 py-3.5 sm:gap-4 sm:px-8 sm:py-4 lg:px-12">
             <Link
               to="/"
-              className="relative z-50 min-w-0 flex-1 transition-opacity hover:opacity-90"
+              className="relative z-50 min-w-0 overflow-hidden transition-opacity hover:opacity-90"
               aria-label={`${COMPANY_NAME} home`}
               onClick={closeMenu}
             >
-              <BrandMark />
+              <BrandMark variant="header" />
             </Link>
 
             <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
