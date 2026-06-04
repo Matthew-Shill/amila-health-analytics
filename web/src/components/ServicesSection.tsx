@@ -38,13 +38,7 @@ export function ServicesSection() {
                   />
                 </span>
                 <h3 className="font-headline text-2xl font-semibold leading-tight text-espresso">
-                  {service.title.includes("AI-Assisted") ? (
-                    <>
-                      <span className="keyword-emphasis">AI-Assisted</span> Insights
-                    </>
-                  ) : (
-                    service.title
-                  )}
+                  {service.title}
                 </h3>
               </div>
               <ul className="relative mt-6 grid gap-2.5 sm:grid-cols-2">

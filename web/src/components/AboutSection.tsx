@@ -42,11 +42,7 @@ export function AboutSection() {
                 className="rounded-full border border-[color-mix(in_srgb,var(--amara-smoked-teal)_20%,transparent)] bg-gradient-to-br from-white to-[color-mix(in_srgb,var(--amara-pearl)_90%,white)] px-4 py-2.5 text-sm font-semibold text-espresso shadow-sm transition-transform hover:-translate-y-0.5"
                 style={{ transitionDelay: `${i * 30}ms` }}
               >
-                {cap.includes("AI-Assisted") ? (
-                  <>
-                    <span className="keyword-emphasis">AI-Assisted</span> Insights
-                  </>
-                ) : cap.includes("Inventory") ? (
+                {cap.includes("Inventory") ? (
                   <>
                     <span className="keyword-emphasis">Inventory</span> Clarity
                   </>
