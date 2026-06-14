@@ -21,8 +21,8 @@ export function SectionHeading({
   const alignClass = align === "center" ? "text-center mx-auto items-center" : "text-left items-start";
   const titleClass = light ? "text-pearl" : "heading-accent";
   const subClass = light
-    ? "text-[color-mix(in_srgb,var(--amila-pearl)_82%,white)]"
-    : "text-[color-mix(in_srgb,var(--amila-espresso)_72%,white)]";
+    ? "text-cream/90"
+    : "text-espresso/75";
 
   return (
     <div className={`flex max-w-3xl flex-col ${alignClass} mb-14 lg:mb-16`}>
@@ -37,7 +37,7 @@ export function SectionHeading({
         {title}
       </h2>
       <span
-        className={`mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-nude-stone via-smoked-teal to-transparent ${align === "center" ? "mx-auto" : ""}`}
+        className={`section-divider mt-5 ${align === "center" ? "mx-auto" : ""}`}
         aria-hidden
       />
       {subtitle && (

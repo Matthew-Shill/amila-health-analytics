@@ -16,7 +16,7 @@ export function ExpertLedSection() {
             Human Expertise Behind Every Insight
           </h2>
           <span
-            className="mt-5 block h-1 w-16 rounded-full bg-gradient-to-r from-nude-stone via-smoked-teal to-transparent"
+            className="mt-5 block h-1 w-16 rounded-full bg-gradient-to-r from-pink via-blue to-transparent"
             aria-hidden
           />
           <p className="mt-6 text-base leading-relaxed text-[color-mix(in_srgb,var(--amila-espresso)_78%,white)] sm:text-lg">

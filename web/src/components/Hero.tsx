@@ -8,15 +8,15 @@ const heroTagline = TAGLINE;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 sm:pt-32 lg:pt-36">
+    <section className="relative overflow-hidden bg-cream pt-28 sm:pt-32 lg:pt-36">
       <div className="hero-mesh absolute inset-0" aria-hidden />
       <div
-        className="orb orb-pink left-[5%] top-[20%] h-48 w-48 sm:h-64 sm:w-64"
+        className="orb orb-pink left-[8%] top-[18%] h-40 w-40 sm:h-52 sm:w-52"
         style={{ animationDelay: "0s" }}
         aria-hidden
       />
       <div
-        className="orb orb-blue right-[10%] top-[10%] h-56 w-56 sm:h-72 sm:w-72"
+        className="orb orb-blue right-[12%] top-[8%] h-44 w-44 sm:h-56 sm:w-56"
         style={{ animationDelay: "-4s" }}
         aria-hidden
       />
@@ -26,21 +26,21 @@ export function Hero() {
           <div className="max-w-xl animate-fade-up">
             <Eyebrow className="mb-6">Healthcare & wellness clarity</Eyebrow>
 
-            <h1 className="font-headline text-[2.65rem] font-semibold leading-[1.06] text-espresso sm:text-5xl lg:text-[3.5rem]">
+            <h1 className="font-headline text-[2.65rem] font-semibold leading-[1.06] text-espresso-deep sm:text-5xl lg:text-[3.5rem]">
               {heroTagline.replace("AHA Moment", "").trim()}{" "}
               <span
-                className="block sm:inline bg-gradient-to-r from-smoked-teal to-[color-mix(in_srgb,var(--amila-nude-stone)_90%,var(--amila-smoked-teal))] bg-clip-text text-transparent"
+                className="block bg-gradient-to-r from-blue via-blue to-pink bg-clip-text text-transparent sm:inline"
                 style={{ fontFamily: "var(--amila-font-slogan)", fontWeight: 400, fontSize: "1.15em" }}
               >
                 AHA Moment
               </span>
             </h1>
 
-            <p className="mt-6 text-xl font-medium leading-snug text-smoked-teal sm:text-2xl">
+            <p className="mt-6 text-xl font-semibold leading-snug text-blue sm:text-2xl">
               {MISSION}
             </p>
 
-            <p className="mt-5 text-base leading-relaxed text-[color-mix(in_srgb,var(--amila-espresso)_78%,white)] sm:text-lg">
+            <p className="mt-5 text-base leading-relaxed text-espresso/80 sm:text-lg">
               Amila Health Analytics helps businesses uncover opportunities lost in the platforms
               they use. We curate cohesive reports that improve operations. Fostering better
               experiences for providers and clients backed by data.
@@ -65,20 +65,20 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 border-t border-[color-mix(in_srgb,var(--amila-nude-stone)_40%,transparent)] bg-[color-mix(in_srgb,white_50%,var(--amila-pearl))]">
-        <div className="container-wide flex flex-wrap items-center justify-center gap-x-10 gap-y-3 px-5 py-4 text-center text-xs font-semibold uppercase tracking-[0.14em] text-[color-mix(in_srgb,var(--amila-espresso)_55%,white)] sm:justify-between sm:px-8 sm:text-left lg:px-12">
+      <div className="relative z-10 border-t border-blue/10 bg-surface/85 backdrop-blur-md">
+        <div className="container-wide flex flex-wrap items-center justify-center gap-x-10 gap-y-3 px-5 py-4 text-center text-xs font-semibold uppercase tracking-[0.14em] text-espresso/70 sm:justify-between sm:px-8 sm:text-left lg:px-12">
           <span>
             <span className="keyword-emphasis">Revenue</span> clarity
           </span>
-          <span className="hidden h-1 w-1 rounded-full bg-nude-stone sm:block" />
+          <span className="hidden h-1 w-1 rounded-full bg-pink sm:block" />
           <span>
             <span className="keyword-emphasis">Performance</span> visibility
           </span>
-          <span className="hidden h-1 w-1 rounded-full bg-nude-stone sm:block" />
+          <span className="hidden h-1 w-1 rounded-full bg-pink sm:block" />
           <span>
             <span className="keyword-emphasis">Operational</span> clarity
           </span>
-          <span className="hidden h-1 w-1 rounded-full bg-nude-stone sm:block" />
+          <span className="hidden h-1 w-1 rounded-full bg-pink sm:block" />
           <span>
             <span className="keyword-emphasis">Strategic</span> insights
           </span>

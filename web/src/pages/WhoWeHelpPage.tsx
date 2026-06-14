@@ -57,7 +57,7 @@ export function WhoWeHelpPage() {
                   Built for healthcare and wellness organizations of every size.
                 </h1>
                 <span
-                  className="mx-auto mt-5 block h-1 w-16 rounded-full bg-gradient-to-r from-nude-stone via-smoked-teal to-transparent"
+                  className="mx-auto mt-5 block h-1 w-16 rounded-full bg-gradient-to-r from-pink via-blue to-transparent"
                   aria-hidden
                 />
                 <p className="mt-6 text-base leading-relaxed text-[color-mix(in_srgb,var(--amila-espresso)_78%,white)] sm:text-lg">

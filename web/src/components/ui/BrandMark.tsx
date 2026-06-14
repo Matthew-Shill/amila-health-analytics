@@ -12,7 +12,7 @@ export function BrandMark({ layout = "comfortable" }: BrandMarkProps) {
   return (
     <div className={config.containerClass}>
       <img
-        src={BRAND_FULL_LOGO_WEB.stone}
+        src={BRAND_FULL_LOGO_WEB.blue}
         alt={COMPANY_NAME}
         className={config.logoClass}
         width={240}

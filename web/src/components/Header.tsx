@@ -25,8 +25,8 @@ export function Header() {
         <div
           className={`transition-all duration-500 ${
             scrolled
-              ? "border-b border-[color-mix(in_srgb,var(--amila-nude-stone)_45%,transparent)] bg-[color-mix(in_srgb,var(--amila-pearl)_90%,white)] shadow-[0_12px_40px_-16px_rgba(125,87,73,0.12)] backdrop-blur-xl"
-              : "bg-[color-mix(in_srgb,var(--amila-pearl)_40%,transparent)] backdrop-blur-sm"
+              ? "border-b border-blue/10 bg-surface/90 shadow-[0_8px_32px_-12px_color-mix(in_srgb,var(--amila-blue)_12%,transparent)] backdrop-blur-xl"
+              : "bg-cream/60 backdrop-blur-sm"
           }`}
         >
           <div className="container-wide grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 py-3.5 sm:gap-4 sm:px-8 sm:py-4 lg:px-12">

@@ -80,7 +80,7 @@ export function NeedsEvaluator() {
                 </div>
                 <div className="mb-8 h-2 overflow-hidden rounded-full bg-[color-mix(in_srgb,var(--amila-nude-stone)_35%,white)]">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-nude-stone via-smoked-teal to-smoked-teal transition-all duration-500 shadow-sm"
+                    className="h-full rounded-full bg-gradient-to-r from-pink via-blue to-blue transition-all duration-500 shadow-sm"
                     style={{
                       width: `${((step + (answers[step] !== null ? 1 : 0)) / EVALUATOR_QUESTIONS.length) * 100}%`,
                     }}

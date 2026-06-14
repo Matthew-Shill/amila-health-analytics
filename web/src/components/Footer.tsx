@@ -14,7 +14,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-[color-mix(in_srgb,var(--amila-nude-stone)_45%,transparent)] bg-gradient-to-b from-[color-mix(in_srgb,white_40%,var(--amila-pearl))] to-pearl px-5 py-16 sm:px-8 lg:px-12">
+    <footer className="relative border-t border-blue/10 bg-gradient-to-b from-surface to-cream px-5 py-16 sm:px-8 lg:px-12">
       <div className="container-wide grid gap-12 lg:grid-cols-[1.3fr_1fr_auto] lg:items-center">
         <div>
           <Link
@@ -25,12 +25,12 @@ export function Footer() {
             <BrandMark layout="comfortable" />
           </Link>
           <p
-            className="mt-5 text-3xl text-smoked-teal"
+            className="mt-5 bg-gradient-to-r from-blue to-pink bg-clip-text text-3xl text-transparent"
             style={{ fontFamily: "var(--amila-font-slogan)" }}
           >
             {TAGLINE}
           </p>
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-[color-mix(in_srgb,var(--amila-espresso)_62%,white)]">
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-espresso/70">
             {FOOTER_TRUST_TEXT}
           </p>
           <p className="mt-6 text-xs font-medium text-[color-mix(in_srgb,var(--amila-espresso)_55%,white)]">

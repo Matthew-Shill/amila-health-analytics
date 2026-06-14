@@ -6,10 +6,10 @@ import { SectionBackdropWide } from "@/components/ui/SectionBackdrop";
 import { CollapsibleOnMobile } from "@/components/ui/CollapsibleOnMobile";
 
 const SERVICE_ACCENTS = [
-  "from-smoked-teal/20 to-nude-stone/30",
-  "from-nude-stone/40 to-smoked-teal/15",
-  "from-smoked-teal/15 to-espresso/10",
-  "from-nude-stone/35 to-pearl",
+  "from-blue/15 to-pink/25",
+  "from-pink/30 to-blue/10",
+  "from-blue/10 to-espresso/5",
+  "from-pink/20 to-cream",
 ];
 
 export function ServicesSection() {
@@ -26,16 +26,16 @@ export function ServicesSection() {
       <div className="grid gap-6 md:grid-cols-2">
         {SERVICES.map((service, i) => (
           <Reveal key={service.title} delay={(i % 4) as 0 | 1 | 2 | 3}>
-            <article className="card-lift card-accent group relative h-full overflow-hidden rounded-3xl border border-[color-mix(in_srgb,var(--amila-nude-stone)_40%,transparent)] bg-white/70 p-7 shadow-[0_16px_48px_-20px_rgba(125,87,73,0.15)] lg:p-8">
+            <article className="card-lift card-accent surface-card group relative h-full overflow-hidden rounded-3xl p-7 lg:p-8">
               <div
                 className={`pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br ${SERVICE_ACCENTS[i]} opacity-80 blur-2xl transition-transform duration-500 group-hover:scale-125`}
                 aria-hidden
               />
               <div className="relative flex items-start gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-smoked-teal to-[color-mix(in_srgb,var(--amila-smoked-teal)_65%,var(--amila-espresso))] shadow-lg">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue to-espresso-deep shadow-lg">
                   <AmilaIcon
                     name={SERVICE_ICON_NAMES[i]}
-                    className="h-6 w-6 text-pearl"
+                    className="h-6 w-6 text-surface"
                   />
                 </span>
                 <h3 className="font-headline text-2xl font-semibold leading-tight text-espresso">

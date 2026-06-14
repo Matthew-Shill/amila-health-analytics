@@ -67,7 +67,7 @@ export function HeroDashboard() {
               <p className="text-sm font-medium text-espresso">Performance Index</p>
               <p className="font-headline text-2xl text-smoked-teal">+14.8%</p>
             </div>
-            <div className="h-36 rounded-xl bg-[color-mix(in_srgb,white_60%,var(--amila-pearl))] p-3 sm:h-44">
+            <div className="h-36 rounded-xl bg-blue-soft/60 p-3 sm:h-44">
               <MiniChart />
             </div>
           </div>
@@ -76,7 +76,7 @@ export function HeroDashboard() {
             {metrics.slice(0, 4).map((m) => (
               <div
                 key={m.label}
-                className="rounded-xl border border-[color-mix(in_srgb,var(--amila-nude-stone)_35%,transparent)] bg-white/50 p-3"
+                className="rounded-xl border border-blue/10 bg-surface p-3"
               >
                 <p className="text-[11px] font-medium text-[color-mix(in_srgb,var(--amila-espresso)_65%,white)]">
                   {m.label}

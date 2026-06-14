@@ -5,10 +5,15 @@
 
 :root {
   /* Colors */
-  --amila-cream: #e8d5b1;
+  --amila-cream: #faf8f4;
+  --amila-cream-deep: #f0ebe3;
+  --amila-surface: #ffffff;
   --amila-pink: #f7a1b7;
+  --amila-pink-soft: #fdeef3;
   --amila-blue: #3e5376;
+  --amila-blue-soft: #e9eef5;
   --amila-espresso: #7d5749;
+  --amila-espresso-deep: #5a3d32;
 
   /* Legacy aliases */
   --amila-pearl: var(--amila-cream);
