@@ -604,48 +604,48 @@ body {
 }
 
 .brand-full-logo--compact {
-  --brand-full-logo-height: 3.25rem;
-  --brand-full-logo-max-width: 20rem;
+  --brand-full-logo-height: 4rem;
+  --brand-full-logo-max-width: 24rem;
 }
 
 .brand-full-logo--comfortable {
-  --brand-full-logo-height: 3.75rem;
-  --brand-full-logo-max-width: 22rem;
+  --brand-full-logo-height: 4.75rem;
+  --brand-full-logo-max-width: 28rem;
 }
 
 @media (min-width: 640px) {
   .brand-full-logo--compact {
-    --brand-full-logo-height: 3.75rem;
-    --brand-full-logo-max-width: 24rem;
+    --brand-full-logo-height: 4.75rem;
+    --brand-full-logo-max-width: 28rem;
   }
 
   .brand-full-logo--comfortable {
-    --brand-full-logo-height: 4.5rem;
-    --brand-full-logo-max-width: 28rem;
+    --brand-full-logo-height: 5.75rem;
+    --brand-full-logo-max-width: 34rem;
   }
 }
 
 @media (min-width: 768px) {
   .brand-full-logo--compact {
-    --brand-full-logo-height: 4rem;
-    --brand-full-logo-max-width: 26rem;
+    --brand-full-logo-height: 5.25rem;
+    --brand-full-logo-max-width: 32rem;
   }
 
   .brand-full-logo--comfortable {
-    --brand-full-logo-height: 5rem;
-    --brand-full-logo-max-width: 32rem;
+    --brand-full-logo-height: 6.75rem;
+    --brand-full-logo-max-width: 40rem;
   }
 }
 
 @media (min-width: 1024px) {
   .brand-full-logo--compact {
-    --brand-full-logo-height: 4.25rem;
-    --brand-full-logo-max-width: 28rem;
+    --brand-full-logo-height: 5.75rem;
+    --brand-full-logo-max-width: 36rem;
   }
 
   .brand-full-logo--comfortable {
-    --brand-full-logo-height: 5.25rem;
-    --brand-full-logo-max-width: 34rem;
+    --brand-full-logo-height: 7.25rem;
+    --brand-full-logo-max-width: 44rem;
   }
 }
 

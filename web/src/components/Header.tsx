@@ -29,7 +29,7 @@ export function Header() {
               : "bg-cream/60 backdrop-blur-sm"
           }`}
         >
-          <div className="container-wide flex items-center gap-4 px-5 py-3.5 sm:px-8 sm:py-4 lg:gap-8 lg:px-12">
+          <div className="container-wide flex items-center gap-4 px-5 py-4 sm:px-8 sm:py-5 lg:gap-8 lg:px-12">
             <Link
               to="/"
               className="relative z-50 shrink-0 transition-opacity hover:opacity-90"
